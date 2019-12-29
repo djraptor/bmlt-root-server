@@ -325,6 +325,7 @@ class bmlt_semantic
         if ($this->_keys) {
             $ret = $this->_keys;
         } elseif ($this->_bmltRootServerURI) {
+            // TODO fix csv parsing
             $keys = explode("\n", self::call_curl($this->_bmltRootServerURI.'/client_interface/csv/?switcher=GetFieldKeys'));
             
             $first = true;

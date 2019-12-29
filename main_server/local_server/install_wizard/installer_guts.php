@@ -523,6 +523,7 @@ function bmlt_create_region_bias_select()
     $ret = '';
     
     $file_path = dirname(__FILE__).'/country_names_and_code_elements.txt';
+    // TODO fix csv parsing
     $cc_array = explode("\n", file_get_contents($file_path));
     
     $ret .= '<select onchange="g_installer_object.gatherInstallerState()" id="installer_region_bias_select">';
